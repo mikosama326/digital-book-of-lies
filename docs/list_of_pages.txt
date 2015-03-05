@@ -1,0 +1,22 @@
+Legend
+======
++ Complete, viewable
+- Complete, viewable but not actual test data (File has been created.)
+= Implemented functionally
+  Page not created
+
+
++Sign out
+-Planner
+-Settings
+Settings with admin rights
+-Stats
+-Admin stats
+	-By Dept
+	-By Sem
+	-By Section
++Class pages
+	+Coursework
+	+Attendance
+	+Stats
+	-Internal marks?
