@@ -64,6 +64,7 @@ header h2 {
   font-weight:bold;
 }
 
+/*The div that tells you who you're logged in as.*/
 .login {
   position: relative;
   top: 20px;
@@ -137,11 +138,16 @@ main {
 
 }
 
-main h1 {
-  color:#FFFFFF;
-  font-size: 25px;
+main h1,h2,h3,h4,h5 {
   font-weight: bold;
-  padding: 3px;
+  color:#FFFFFF;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+main h1 {
+  font-size: 25px;
+  padding: none;
   text-align: center;
   width: 75%;
   margin-left: auto;
@@ -149,29 +155,23 @@ main h1 {
 }
 
 main h2 {
-  color:#FFFFFF;
   font-size: 22px;
-  font-weight: bold;
-  padding: 3px;
+  padding: none;
   text-align: center;
-  width: 75%;
   margin-left: auto;
   margin-right: auto;
 }
 
 main h3 {
-  color:#FFFFFF;
   font-size: 18px;
-  font-weight: bold;
-  padding: 3px;
 }
 
 main h4 {
-  color:#FFFFFF;
   font-size: 17px;
-  font-weight: bold;
-  padding: 3px;
   text-decoration: underline;
+}
+
+main ul,li {
 }
 
 table {

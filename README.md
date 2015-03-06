@@ -2,6 +2,7 @@
 A web application for teachers and college faculty to track their coursework.
 More details coming up later!
 
+**Current version: 2.0**
 
 This file contains details about the file-structure and organization, as well as about some other stuff to keep in mind when mucking around with this application.
 
@@ -9,9 +10,13 @@ Well, despite saying that, there really is no 'structure' at the moment. All fil
 
 Also, at the moment, the site is just a prototype. Much of functionality hasn't actually been added in yet. Just an FYI.
 
-Current users: master - yoda
+**Current users:**
+master - yoda
 admin - bunnies
 
+#Cutenews
+
+This site uses CutePHP in a few places for stuff like the updates page and such.
 
 #Pages
 
@@ -112,11 +117,3 @@ Defines a set of buttons for use in the main section of the site. Those buttons 
 ##list_of_pages.txt
 
 A checklist of all pages in the site required to be made.
-
-##readme.mkd
-
-Hey, you're right here!
-
-##readme.txt
-
-The text version of this file. Chances are, it's outdated. Don't open that.

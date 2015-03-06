@@ -16,6 +16,7 @@ Faculty Login
 ?>
 
 <?php
+  session_start();
   $msg = "";
   error_reporting(E_ALL);
   #If the user is 'master' and password is 'yoda' or if user is 'admin' and password is 'bunnies'

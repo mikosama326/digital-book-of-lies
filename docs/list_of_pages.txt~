@@ -9,7 +9,7 @@ Legend
 +Sign out
 -Planner
 -Settings
--Settings with admin rights
+Settings with admin rights
 -Stats
 -Admin stats
 	-By Dept
@@ -19,4 +19,4 @@ Legend
 	+Coursework
 	+Attendance
 	+Stats
-	+Internal marks?
+	-Internal marks?
