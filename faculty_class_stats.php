@@ -10,10 +10,10 @@
 </title>
   
 <?php
-  $head = file_get_contents('headertext.html');
-  $nav = file_get_contents('nav.htm');
-  $foot = file_get_contents('footertext.html');
+      include('session.php');
+      include('checklogin.php');
 ?>
+
 
 </head>
 
@@ -23,8 +23,8 @@
 
 <header>
 <?php
-	# Put header content in the document
-	echo $head;
+    # Put header content
+    include('headertext.php');
 ?>
 </header>
 

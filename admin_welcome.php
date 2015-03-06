@@ -10,11 +10,10 @@
 </title>
   
 <?php
-  $head = file_get_contents('headertext.html');
-  $nav = file_get_contents('nav.htm');
-  $foot = file_get_contents('footertext.html');
-  session_start();
+      include('session.php');
+      include('checklogin.php');
 ?>
+
 </head>
 
 <body>
@@ -23,10 +22,8 @@
 
 <header>
 <?php
-	# Put header content in the document
-	echo $head;
-	if (isset($_SESSION['username']))
-	  echo '<p class="login">You are currently logged in as ' . $_SESSION['username'] . '.</p>'
+    # Put header content
+    include('headertext.php');
 ?>
 </header>
 

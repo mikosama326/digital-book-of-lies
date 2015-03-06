@@ -1,6 +1,4 @@
-This file contains details about the file-structure and organization.
-
-Well, despite saying that, there really is no 'structure' at the moment. All files are in the root folder. The 'old' folder contains the previous version of the site.
+*Last updated: --- *
 
 #Pages
 
@@ -72,7 +70,11 @@ Contains the text for the footer of the site. Also just to make it easy to chang
 
 ##nav.htm
 
-Contains the links for the nav-bar in the site. Same reason as above.
+Contains the links for the default nav-bar in the site.
+
+##session_nav.htm
+
+Contains the links for the nav-bar in the site while a login session is running.
 
 ##news.html
 
@@ -97,7 +99,3 @@ Defines a set of buttons for use in the main section of the site. Those buttons 
 ##list_of_pages.txt
 
 A checklist of all pages in the site required to be made.
-
-##readme.mkd
-
-Hey, you're right here!

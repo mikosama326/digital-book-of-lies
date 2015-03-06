@@ -7,32 +7,20 @@
 
   <title>
 Basic Layout for DBoL
-</title>
+  </title>
 
 <?php
-      $navfile = 'nav.htm';
-      $configs = include('config.php');
-      ini_set('display_errors',1);
-      error_reporting(E_ALL);
-      #include('config.php'); For including the phplogic later.
-      
+      include('session.php');
 ?>
 
-<?php
-$myfile = fopen("log/newfile.txt", "w");
+<!--<?php
+$myfile = fopen("log/newfile.txt", "a");
 $txt = "Hello\n";
 fwrite($myfile, $txt);
 $txt = "Goodbye\n";
 fwrite($myfile, $txt);
 fclose($myfile);
-?>
-
-<?php
-  $head = file_get_contents('headertext.html');
-  $nav = file_get_contents($navfile);
-  $foot = file_get_contents('footertext.html');
-  session_start();
-?>
+?>-->
 
 </head>
 
@@ -40,17 +28,15 @@ fclose($myfile);
 <center>
 
 
+<!--HEADER-->
 <header>
 <?php
-	# Put header content in the document
-	echo $head;
-?>
-<?php
-	if (isset($_SESSION['username']))
-	 echo '<p class="login">You are currently logged in as ' . $_SESSION['username'] . '.</p>'
+    # Put header content
+    include('headertext.php');
 ?>
 </header>
 
+<!--NAV BAR-->
 <nav>
 <?php
 	# Put nav content in the document
@@ -58,6 +44,7 @@ fclose($myfile);
 ?>
 </nav>
 
+<!--MAIN AREA-->
 <main>
 
 
@@ -77,7 +64,7 @@ The application is primarily web-based and is designed to run on a local server 
 </p>
 <h3>Other stuff used in this site:</h3>
 <p>
-<a href="http://cutephp.com/">Cutenews</a>, for development updates as well as for general updates.
+<a href="http://cutephp.com/" title="CutePHP">Cutenews</a>, for development updates as well as for general updates.
 </p>
 
 <h3>More information?</h3>
@@ -101,12 +88,14 @@ To find out more about us, the developers, head on over to the <a href="whoami.p
 
 </main>
 
+<!--FOOTER-->
 <footer>
 <?php
 	# Put footer content in the document
 	echo $foot;
 ?>
 </footer>
+
 
 </center>
 </body>

@@ -10,10 +10,9 @@ Leave us a Comment
 </title>
   
 <?php
-  $head = file_get_contents('headertext.html');
-  $nav = file_get_contents('nav.htm');
-  $foot = file_get_contents('footertext.html');
+      include('session.php');
 ?>
+
 
 <?php
 $thanks = "We'd love to have some feedback on this site/prototype.";
@@ -43,8 +42,8 @@ if(isset($_POST['comment'])) {
 
 <header>
 <?php
-	# Put header content in the document
-	echo $head;
+    # Put header content
+    include('headertext.php');
 ?>
 </header>
 

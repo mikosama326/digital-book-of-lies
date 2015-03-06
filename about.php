@@ -10,9 +10,7 @@ About
 </title>
   
 <?php
-  $head = file_get_contents('headertext.html');
-  $nav = file_get_contents('nav.htm');
-  $foot = file_get_contents('footertext.html');
+      include('session.php');
 ?>
 
 </head>
@@ -23,8 +21,8 @@ About
 
 <header>
 <?php
-	# Put header content in the document
-	echo $head;
+    # Put header content
+    include('headertext.php');
 ?>
 </header>
 
@@ -47,10 +45,6 @@ About
 <?php 
   $category = "1";
   include("cutenews/show_news.php"); 
-?>
-<?php
-	#$requ=file_get_contents('RequirementsDoc.html');
-	#echo $requ;
 ?>
 
 </main>

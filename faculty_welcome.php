@@ -10,11 +10,9 @@
 </title>
   
 <?php
-  $head = file_get_contents('headertext.html');
-  $nav = file_get_contents('nav.htm');
-  $foot = file_get_contents('footertext.html');
-  session_start();
+      include('session.php');
 ?>
+
 </head>
 
 <body>
@@ -23,13 +21,8 @@
 
 <header>
 <?php
-	# Put header content in the document
-	echo $head;
-	if (isset($_SESSION['username']))
-	  echo '<p class="login">You are currently logged in as ' . $_SESSION['username'] . '.</p>'
-?>
-<?php
-	
+    # Put header content
+    include('headertext.php');
 ?>
 </header>
 
@@ -42,15 +35,9 @@
 
 <main>
 
-<h1><?php echo "Welcome ".$_SESSION['username']; ?>!!</h1>
-
-
-<p>Good to see you again.</p>
+<h1><?php echo "Welcome, ".$_SESSION['username']; ?></h1>
 
 <center>
-<form action="faculty_login.php" method="POST">
-   <button type="submit" name="logout" class="smallbutton">Sign out</button>
-</form>
 
 <a class="smallbutton" href="faculty_planner.php">Planner</a>
 <a class="smallbutton" href="faculty_settings.php">Settings</a>

@@ -10,14 +10,9 @@ News
 </title>
   
 <?php
-  $head = file_get_contents('headertext.html');
-  $nav = file_get_contents('nav.htm');
-  $foot = file_get_contents('footertext.html');
+      include('session.php');
 ?>
 
-<?php
-  $text = file_get_contents('news.html');
-?>
 
 <style>
 main {
@@ -34,8 +29,8 @@ main {
 
 <header>
 <?php
-	# Put header content in the document
-	echo $head;
+    # Put header content
+    include('headertext.php');
 ?>
 </header>
 

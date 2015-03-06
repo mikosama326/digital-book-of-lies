@@ -64,6 +64,20 @@ header h2 {
   font-weight:bold;
 }
 
+.headlink {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 40px; 
+  font-weight:bold; 
+}
+
+.headlink:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 40px; 
+  font-weight:bold; 
+}
+
 /*The div that tells you who you're logged in as.*/
 .login {
   position: relative;

@@ -8,42 +8,41 @@
   <title>
 Faculty Login
 </title>
-  
-<?php
-  $head = file_get_contents('headertext.html');
-  $nav = file_get_contents('nav.htm');
-  $foot = file_get_contents('footertext.html');
-?>
 
 <?php
-  session_start();
-  $msg = "";
-  error_reporting(E_ALL);
+  include('session.php'); //Include the basic stuff
+  
+  $msg = ""; //Message displayed, default is empty.
+  
+  if(isset($_POST['username'])){
+  
   #If the user is 'master' and password is 'yoda' or if user is 'admin' and password is 'bunnies'
   if (($_POST['username'] == "master" && $_POST['password'] == "yoda") || ($_POST['username'] == "admin" && $_POST['password'] == "bunnies")) {
-    session_start();
     $_SESSION['username'] = $_POST['username'];
-    $_SESSION['valid'] = "true";
-    $_SESSION['auth'] = "true";
-    $_SESSION['nav'] = 'session_nav.htm';
+    $_SESSION['valid'] = true;
+    $_SESSION['auth'] = true;
     $msg = "Welcome back, ".$_SESSION['username'].". Redirecting you...";
     if ($_POST['username'] == "master")
     	header('Refresh: 0; URL=faculty_welcome.php');
     else
     	header('Refresh: 0; URL=admin_welcome.php');
   }
+  
   #If there is an invalid attempt
   else if(isset($_POST['username'])) {
     $msg = "Sorry, invalid id or password.";
   }
+  }
+  
   #If we just logged out.
-  else if( isset($_POST['logout']) ) {
-    $_SESSION['valid'] = "false";
-    $_SESSION['auth'] = "false";    
+  if(isset($_POST['logout']) ) {
+    $_SESSION['valid'] = false;
+    $_SESSION['auth'] = false;    
     session_unset();
     session_destroy();
     $msg = "You have successfully logged out!";
   }
+
 
 ?>
 
@@ -56,7 +55,7 @@ Faculty Login
 <header>
 <?php
 	# Put header content in the document
-	echo $head;
+	include('headertext.php');
 ?>
 </header>
 
