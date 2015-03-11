@@ -42,9 +42,6 @@
 <p>Good to see you again.</p>
 
 <center>
-<form action="faculty_login.php" method="POST">
-   <button type="submit" name="logout" class="smallbutton">Sign out</button>
-</form>
 
 <a class="smallbutton" href="faculty_planner.php">Planner</a>
 <a class="smallbutton" href="admin_settings.php">Settings</a>

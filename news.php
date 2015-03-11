@@ -52,6 +52,7 @@ main {
 ?>
 
 <?php 
+	$number = "5";
 	$category = "2";
 	include("cutenews/show_news.php"); 
 ?>
