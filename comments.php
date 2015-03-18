@@ -32,6 +32,15 @@ if(isset($_POST['comment'])) {
 	// send email
 	mail("srija326@gmail.com",$subject,$msg);
 }
+
+$name = "";
+$email = "";
+
+if(isset($_SESSION['valid'])) {
+	$name = $_SESSION['name'];
+	$email = $_SESSION['email'];
+}
+
 ?>
 
 </head>
@@ -66,8 +75,8 @@ if(isset($_POST['comment'])) {
 ?>
 <br><br>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-  Name: <input type="text" name="name" /><br>
-  Email: <input type="email" name="email" /><br>
+  Name: <input type="text" name="name" value="<?php echo $name;?>"/><br>
+  Email: <input type="email" name="email" value="<?php echo $email;?>"/><br>
   Comment:<br>
   <textarea name="comment" cols="70" rows="10"></textarea><br>
   <input type="submit" value="Submit" />
@@ -79,7 +88,7 @@ if(isset($_POST['comment'])) {
 <footer>
 <?php
 	# Put footer content in the document
-	echo $foot;
+	include($foot);;
 ?>
 </footer>
 

@@ -92,7 +92,7 @@ To find out more about us, the developers, head on over to the <a href="whoami.p
 <footer>
 <?php
 	# Put footer content in the document
-	echo $foot;
+	include($foot);
 ?>
 </footer>
 

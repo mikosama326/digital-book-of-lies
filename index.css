@@ -3,11 +3,11 @@ body {
   color: #FFFFFF;
   font-family: Tahoma;
   font-size: 17px;
-  background: -webkit-linear-gradient(#000000, #00023B)no-repeat; /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#000000, #00023B)no-repeat; /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#000000, #00023B)no-repeat; /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#000000, #00023B)no-repeat;/* Standard syntax (must be last) */
-  background-color: #00023B;
+  background: -webkit-linear-gradient(#000000, #9374f7)no-repeat; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#000000, #9374f7)no-repeat; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#000000, #9374f7)no-repeat; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#000000, #00023b)no-repeat;/* Standard syntax (must be last) */
+  background-color: #00023b;
 }
 
 header,footer,main,nav {
@@ -56,7 +56,13 @@ header {
   margin: 10px; 
   padding: 10px;
   text-align: center;
-  background-color: #00023B;
+  background: -webkit-linear-gradient(#000000, #9374f7)no-repeat; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#000000, #9374f7)no-repeat; /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(#000000, #9374f7)no-repeat; /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#5C5E54,rgba(0,0,0,0.5))no-repeat;/* Standard syntax (must be last) */
+  background-color: rgba(0,0,0,1);
+  background: none;
+  border: none;
 }
 
 header h2 {
@@ -80,9 +86,9 @@ header h2 {
 
 /*The div that tells you who you're logged in as.*/
 .login {
-  position: relative;
+  position: absolute;
   top: 20px;
-  left: 0px;
+  left: 70%;
   font-size: 10px;
 }
 

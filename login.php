@@ -13,7 +13,7 @@
 	
   else if(isset($_POST['username'])) {
   
-    $sql = "SELECT username, passwd, privilege FROM users";
+    $sql = "SELECT username, passwd, privilege, email, name FROM users";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -24,25 +24,30 @@
     	  $_SESSION['username'] = $row["username"];
     	  $_SESSION['valid'] = true;
     	  $_SESSION['auth'] = true;
+    	  $_SESSION["name"] = $row["name"];
+    	  $_SESSION["email"] = $row["email"];
+    	  $_SESSION["privilege"] = $row["privilege"];
     	
           $msg = "Welcome, ".$_SESSION['username'].". Redirecting you...";
     	
-          if ($row["privilege"] == 2)
+          if ($row["privilege"] == 2) {
+    	    $_SESSION['nav'] = "nav_session.htm";
     	    header('Refresh: 0; URL=faculty_welcome.php');
-          else if ($row["privilege"] == 1)
+          }
+          else if ($row["privilege"] == 1) {
+    	    $_SESSION['nav'] = "nav_admin.htm";
     	    header('Refresh: 0; URL=admin_welcome.php');
+    	  }
           else {
-    	    $msg = "Sorry, we haven't finished the Superuser pages yet. :P";
-    	    $_SESSION['valid'] = false;
-            $_SESSION['auth'] = false;    
-            session_unset();
-            session_destroy();
+    	    $_SESSION['nav'] = "nav_admin.htm";
+    	    header('Refresh: 0; URL=superuser_adduser.php');
     	  }// end of else
         }// end of if
       }// end of while
-      if($_SESSION['valid'] == false)
+      if(!isset($_SESSION['valid']))
       	$msg = "Sorry, invalid login or id.";
     }// end of if
+    #}
     else
       $msg = "Oops, looks like we don't have any users.";
   }// end of else-if

@@ -63,7 +63,7 @@
 <footer>
 <?php
 	# Put footer content in the document
-	echo $foot;
+	include($foot);;
 ?>
 </footer>
 

@@ -13,7 +13,7 @@
 </td>
 
 <td class="ver">
-	Version 2.2<br>
+	Version <?php echo $version;?><br>
 	<a href="cutenews/index.php">Cutenews Login</a>
 </td>
 

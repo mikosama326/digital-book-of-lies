@@ -9,8 +9,8 @@
   session_start(); //Start the PHP session
 
   $head = file_get_contents('headertext.php'); //For header text
-  $nav = file_get_contents('nav.htm'); //For the nav bar
-  $foot = file_get_contents('footertext.html'); //For footer text
+  $nav = file_get_contents('nav_default.htm'); //For the nav bar
+  $foot = 'footertext.php'; //For footer text
 ?>
 
 
