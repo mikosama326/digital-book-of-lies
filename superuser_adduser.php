@@ -32,7 +32,7 @@ Settings
    $passwd = $_POST['password'];
    $username = $_POST['username'];
    
-   $sql = "INSERT INTO users (username, passwd, privilege, name) VALUES ($username, $passwd, 2, $name);";
+   $sql = "INSERT INTO users (userid, username, passwd, privilege, email, name) VALUES (NULL, '$username', '$passwd', 2, '$email', '$name');";
 
     if ($conn->query($sql) === TRUE) {
       $msg = "New record created successfully";

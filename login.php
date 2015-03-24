@@ -40,7 +40,7 @@
     	  }
           else {
     	    $_SESSION['nav'] = "nav_admin.htm";
-    	    header('Refresh: 0; URL=superuser_adduser.php');
+    	    header('Refresh: 0; URL=superuser_welcome.php');
     	  }// end of else
         }// end of if
       }// end of while
